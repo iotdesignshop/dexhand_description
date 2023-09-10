@@ -172,6 +172,90 @@
   </collision>
 </link>
 
+<link name="index-knuckle_1">
+  <inertial>
+    <origin xyz="0.007134673083101478 -0.0005540875413111747 0.0011013348331220807" rpy="0 0 0"/>
+    <mass value="0.016772407452453803"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015885 -0.030139 -0.340157" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/index-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015885 -0.030139 -0.340157" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/index-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle-knuckle_1">
+  <inertial>
+    <origin xyz="0.006935399474227782 3.095281810635425e-08 0.0009794888636300847" rpy="0 0 0"/>
+    <mass value="0.016772407452453803"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014846 -0.0063 -0.346266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/middle-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014846 -0.0063 -0.346266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/middle-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring-knuckle_1">
+  <inertial>
+    <origin xyz="0.006918049206992894 0.0004875294278836907 0.0009797412002323647" rpy="0 0 0"/>
+    <mass value="0.016772407452453803"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013981 0.018338 -0.342345" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/ring-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013981 0.018338 -0.342345" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/ring-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky-knuckle_1">
+  <inertial>
+    <origin xyz="0.006818820473941571 0.0011824337110899058 0.0010801856787571174" rpy="0 0 0"/>
+    <mass value="0.016772407452453803"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013416 0.039945 -0.334029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/pinky-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013416 0.039945 -0.334029" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/pinky-knuckle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <joint name="flange" type="fixed">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -216,6 +300,38 @@
   <origin xyz="0.0 -0.029 0.0" rpy="0 0 0"/>
   <parent link="middle-bulk_1"/>
   <child link="ring-bulk_1"/>
+</joint>
+
+<joint name="index-yaw" type="revolute">
+  <origin xyz="-0.003905 0.009839 0.084891" rpy="0 0 0"/>
+  <parent link="index-bulk_1"/>
+  <child link="index-knuckle_1"/>
+  <axis xyz="-0.99606 0.086969 -0.017358"/>
+  <limit upper="0.349066" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="middle-yaw" type="revolute">
+  <origin xyz="-0.002866 -0.02 0.091" rpy="0 0 0"/>
+  <parent link="middle-bulk_1"/>
+  <child link="middle-knuckle_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit upper="0.349066" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="ring-yaw" type="revolute">
+  <origin xyz="-0.002001 -0.015638 0.087079" rpy="0 0 0"/>
+  <parent link="ring-bulk_1"/>
+  <child link="ring-knuckle_1"/>
+  <axis xyz="-0.996234 -0.086694 -0.001008"/>
+  <limit upper="0.349066" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="pinky-yaw" type="revolute">
+  <origin xyz="0.010544 -0.017545 -0.153237" rpy="0 0 0"/>
+  <parent link="pinky-bulk_1"/>
+  <child link="pinky-knuckle_1"/>
+  <axis xyz="-0.98067 -0.194947 -0.016825"/>
+  <limit upper="0.349066" lower="-0.349066" effort="100" velocity="100"/>
 </joint>
 
 </robot>
