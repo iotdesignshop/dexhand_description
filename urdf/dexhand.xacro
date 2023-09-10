@@ -88,6 +88,90 @@
   </collision>
 </link>
 
+<link name="index-bulk_1">
+  <inertial>
+    <origin xyz="0.001953836875769263 0.005732502869548333 0.04310739786858114" rpy="0 0 0"/>
+    <mass value="0.10571474174321724"/>
+    <inertia ixx="0.000112" iyy="0.000114" izz="8e-06" ixy="-0.0" iyz="-6e-06" ixz="-7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01198 -0.0203 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/index-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01198 -0.0203 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/index-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle-bulk_1">
+  <inertial>
+    <origin xyz="0.010646950026404922 -0.0158135798135519 0.030689623412746947" rpy="0 0 0"/>
+    <mass value="0.2319963124821001"/>
+    <inertia ixx="0.000258" iyy="0.000268" izz="7.1e-05" ixy="-1.4e-05" iyz="4.2e-05" ixz="4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01198 -0.0263 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/middle-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01198 -0.0263 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/middle-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky-bulk_1">
+  <inertial>
+    <origin xyz="0.014707146884874737 -0.009496610763999918 -0.1955891121635459" rpy="0 0 0"/>
+    <mass value="0.11417768838788588"/>
+    <inertia ixx="0.000111" iyy="0.000112" izz="1e-05" ixy="1e-06" iyz="1.3e-05" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02396 0.0224 -0.487266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/pinky-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02396 0.0224 -0.487266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/pinky-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring-bulk_1">
+  <inertial>
+    <origin xyz="0.003391811603104285 -0.01025124324374128 0.05277806405684754" rpy="0 0 0"/>
+    <mass value="0.09588694429304498"/>
+    <inertia ixx="7.4e-05" iyy="7.4e-05" izz="7e-06" ixy="1e-06" iyz="8e-06" ixz="-7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01198 0.0027 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/ring-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01198 0.0027 -0.255266" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/ring-bulk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <joint name="flange" type="fixed">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -108,6 +192,30 @@
   <child link="wrist-upper_1"/>
   <axis xyz="-1.0 0.0 0.0"/>
   <limit upper="0.436332" lower="-0.436332" effort="100" velocity="100"/>
+</joint>
+
+<joint name="index-bulk" type="fixed">
+  <origin xyz="0.012 0.021 0.023266" rpy="0 0 0"/>
+  <parent link="wrist-upper_1"/>
+  <child link="index-bulk_1"/>
+</joint>
+
+<joint name="middle-bulk" type="fixed">
+  <origin xyz="0.0 0.006 0.0" rpy="0 0 0"/>
+  <parent link="index-bulk_1"/>
+  <child link="middle-bulk_1"/>
+</joint>
+
+<joint name="pinky-bulk" type="fixed">
+  <origin xyz="2e-05 -0.0217 0.255266" rpy="0 0 0"/>
+  <parent link="wrist-upper_1"/>
+  <child link="pinky-bulk_1"/>
+</joint>
+
+<joint name="ring-bulk" type="fixed">
+  <origin xyz="0.0 -0.029 0.0" rpy="0 0 0"/>
+  <parent link="middle-bulk_1"/>
+  <child link="ring-bulk_1"/>
 </joint>
 
 </robot>
