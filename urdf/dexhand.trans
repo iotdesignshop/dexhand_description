@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<robot name="dexhand" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="wrist_pitch_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wrist_pitch">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wrist_pitch_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="wrist_yaw_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wrist_yaw">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wrist_yaw_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

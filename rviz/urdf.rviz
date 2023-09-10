@@ -9,7 +9,7 @@ Visualization Manager:
     - Class: rviz_default_plugins/Grid
       Name: Grid
       Value: true
-    - Alpha: 0.8
+    - Alpha: 1.0
       Class: rviz_default_plugins/RobotModel
       Description Source: Topic
       Description Topic:
@@ -20,6 +20,7 @@ Visualization Manager:
     - Class: rviz_default_plugins/TF
       Name: TF
       Value: true
+      Marker Scale: 0.25
   Global Options:
     Fixed Frame: base_link
     Frame Rate: 30

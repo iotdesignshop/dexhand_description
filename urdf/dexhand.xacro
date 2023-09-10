@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<robot name="dexhand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find dexhand_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find dexhand_description)/urdf/dexhand.trans" />
+<xacro:include filename="$(find dexhand_description)/urdf/dexhand.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-5.952490372344805e-18 -5.952490372344805e-18 0.00625299730853927" rpy="0 0 0"/>
+    <mass value="0.3748186138447861"/>
+    <inertia ixx="0.000121" iyy="0.000121" izz="0.000233" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="-0.0045635525882340025 -0.0024890003495871478 0.09119374176848805" rpy="0 0 0"/>
+    <mass value="2.2753127167166265"/>
+    <inertia ixx="0.009336" iyy="0.00912" izz="0.00247" ixy="-3.2e-05" iyz="4e-06" ixz="0.000837"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wrist-lower_1">
+  <inertial>
+    <origin xyz="-3.0683763790256835e-05 0.02099365535807374 0.021635071099651598" rpy="0 0 0"/>
+    <mass value="0.3236409508310491"/>
+    <inertia ixx="0.000132" iyy="0.000118" izz="0.000139" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012 0.0217 -0.203" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/wrist-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012 0.0217 -0.203" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/wrist-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wrist-upper_1">
+  <inertial>
+    <origin xyz="0.011943478530919125 1.976395235870395e-08 0.007146961841600852" rpy="0 0 0"/>
+    <mass value="0.12131953205677495"/>
+    <inertia ixx="3.3e-05" iyy="2.2e-05" izz="2.6e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02398 0.0007 -0.232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/wrist-upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02398 0.0007 -0.232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/wrist-upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="flange" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="forearm_1"/>
+</joint>
+
+<joint name="wrist_pitch" type="revolute">
+  <origin xyz="-0.012 -0.0217 0.203" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="wrist-lower_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist_yaw" type="revolute">
+  <origin xyz="-0.01198 0.021 0.029" rpy="0 0 0"/>
+  <parent link="wrist-lower_1"/>
+  <child link="wrist-upper_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.436332" lower="-0.436332" effort="100" velocity="100"/>
+</joint>
+
+</robot>
