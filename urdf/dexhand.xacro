@@ -508,6 +508,111 @@
   </collision>
 </link>
 
+<link name="thumb-cmc-b_1">
+  <inertial>
+    <origin xyz="0.003351252729851968 0.0058106071637870765 -0.00814154865248179" rpy="0 0 0"/>
+    <mass value="0.008494087027059793"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.014937 -0.01879 -0.268001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-cmc-b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.014937 -0.01879 -0.268001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-cmc-b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb-cmc-a_1">
+  <inertial>
+    <origin xyz="0.002946681038430113 0.005054293341482705 0.005851296597689182" rpy="0 0 0"/>
+    <mass value="0.015039242610946097"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.017759 -0.023693 -0.258808" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-cmc-a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.017759 -0.023693 -0.258808" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-cmc-a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb-plp_1">
+  <inertial>
+    <origin xyz="0.005433746290735175 0.025637034957291676 0.016614706566931703" rpy="0 0 0"/>
+    <mass value="0.06710748615776632"/>
+    <inertia ixx="2e-05" iyy="1.5e-05" izz="1.3e-05" ixy="-5e-06" iyz="-9e-06" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.028683 -0.026348 -0.26657" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-plp_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.028683 -0.026348 -0.26657" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-plp_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb-mlp_1">
+  <inertial>
+    <origin xyz="0.002151568364903572 0.015611380274394515 0.012743956202626694" rpy="0 0 0"/>
+    <mass value="0.025187203449803457"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.049475 -0.066604 -0.306172" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-mlp_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.049475 -0.066604 -0.306172" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-mlp_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb-tip_1">
+  <inertial>
+    <origin xyz="-0.0009246362325292662 0.010131321702323684 0.007474037055237581" rpy="0 0 0"/>
+    <mass value="0.02316990761545859"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.064312 -0.092065 -0.333221" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-tip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.064312 -0.092065 -0.333221" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://dexhand_description/meshes/thumb-tip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <joint name="flange" type="fixed">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -679,6 +784,46 @@
   <parent link="pinky-mlp_1"/>
   <child link="pinky-tip_1"/>
   <axis xyz="-0.194878 0.965338 0.173624"/>
+  <limit upper="0.785398" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="thumb-yaw" type="revolute">
+  <origin xyz="0.026917 -0.00751 0.012735" rpy="0 0 0"/>
+  <parent link="middle-bulk_1"/>
+  <child link="thumb-cmc-b_1"/>
+  <axis xyz="0.353553 0.612372 -0.707107"/>
+  <limit upper="0.872665" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="thumb-roll" type="revolute">
+  <origin xyz="0.002822 0.004903 -0.009193" rpy="0 0 0"/>
+  <parent link="thumb-cmc-b_1"/>
+  <child link="thumb-cmc-a_1"/>
+  <axis xyz="-0.35613 -0.610881 -0.707104"/>
+  <limit upper="0.349066" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="thumb-pitch" type="revolute">
+  <origin xyz="0.010924 0.002655 0.007762" rpy="0 0 0"/>
+  <parent link="thumb-cmc-a_1"/>
+  <child link="thumb-plp_1"/>
+  <axis xyz="0.864969 -0.501821 -0.002105"/>
+  <limit upper="1.047198" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="thumb-knuckle" type="revolute">
+  <origin xyz="0.020792 0.040256 0.039602" rpy="0 0 0"/>
+  <parent link="thumb-plp_1"/>
+  <child link="thumb-mlp_1"/>
+  <axis xyz="0.864969 -0.501821 -0.002105"/>
+  <limit upper="0.785398" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="thumb-tip" type="revolute">
+  <origin xyz="0.014837 0.025461 0.027049" rpy="0 0 0"/>
+  <parent link="thumb-mlp_1"/>
+  <child link="thumb-tip_1"/>
+  <axis xyz="0.864969 -0.501821 -0.002105"/>
   <limit upper="0.785398" lower="0.0" effort="100" velocity="100"/>
 </joint>
 
