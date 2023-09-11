@@ -20,7 +20,7 @@ Visualization Manager:
     - Class: rviz_default_plugins/TF
       Name: TF
       Value: true
-      Marker Scale: 0.25
+      Marker Scale: 0.15
   Global Options:
     Fixed Frame: base_link
     Frame Rate: 30
