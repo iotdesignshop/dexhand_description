@@ -21,12 +21,30 @@ Setting up the package is like any other ROS 2 package you would build from sour
 
 1) __Clone the GitHub Project__ into a ROS 2 workspace.
 
-2) __Run rosdep__ to make sure you have all the dependencies.
+   (From the src folder of your workspace - for example: /dexhand_ws/src)
 
-3) __Run colcon__ to build the package
+   `git clone https://github.com/iotdesignshop/dexhand_description.git`
+
+2) __Run colcon__ to build the package
+
+   (From the root of your workspace - for example: /dexhand_ws)
+
+   `colcon build`
+
+3) __Run rosdep__ to make sure you have all the dependencies.
+
+   (From the root of your workspace - for example: /dexhand_ws)
+
+   `rosdep install -i --from-path src --rosdistro humble -y`
+
+   **Note: If you are using a distribution other than humble, change the parameter accordingly**
+
 
 4) __Source the environment__ for the workspace
 
+   (Usually a good idea to do this in a fresh terminal window, and from the root of your workspace)
+
+   `source install/setup.bash`
    
      
 ## Usage
