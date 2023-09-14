@@ -1,8 +1,7 @@
 from setuptools import find_packages, setup
 import os
 from glob import glob
-from setuptools import setup
-from setuptools import find_packages
+
 
 package_name = 'dexhand_description'
 
