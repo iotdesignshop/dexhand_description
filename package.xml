@@ -8,8 +8,8 @@
   <license>CC BY-NC-SA 4.0</license>
 
   <depend>rclpy</depend>
-
-  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <depend>joint_state_publisher_gui<depend>
+  
   <exec_depend>xacro</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
