@@ -1,41 +1,366 @@
 Panels:
   - Class: rviz_common/Displays
+    Help Height: 138
     Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+      Splitter Ratio: 0.5
+    Tree Height: 441
   - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
     Name: Views
+    Splitter Ratio: 0.5
 Visualization Manager:
   Class: ""
   Displays:
-    - Class: rviz_default_plugins/Grid
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
       Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 1.0
+    - Alpha: 1
       Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
       Description Source: Topic
       Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
         Value: /robot_description
       Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        forearm_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hand-cover_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        index_bulk_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        index_knuckle_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        index_mlp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        index_plp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        index_tip_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        middle_bulk_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        middle_knuckle_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        middle_mlp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        middle_plp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        middle_tip_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pinky_bulk_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pinky_knuckle_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pinky_mlp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pinky_plp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pinky_tip_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ring_bulk_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ring_knuckle_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ring_mlp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ring_plp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ring_tip_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_cmc_a_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_cmc_b_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_mlp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_plp_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_tip_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_lower_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_upper_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
       Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
       Value: true
+      Visual Enabled: true
     - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        forearm_1:
+          Value: true
+        hand-cover_1:
+          Value: true
+        index_bulk_1:
+          Value: true
+        index_knuckle_1:
+          Value: true
+        index_mlp_1:
+          Value: true
+        index_plp_1:
+          Value: true
+        index_tip_1:
+          Value: true
+        middle_bulk_1:
+          Value: true
+        middle_knuckle_1:
+          Value: true
+        middle_mlp_1:
+          Value: true
+        middle_plp_1:
+          Value: true
+        middle_tip_1:
+          Value: true
+        pinky_bulk_1:
+          Value: true
+        pinky_knuckle_1:
+          Value: true
+        pinky_mlp_1:
+          Value: true
+        pinky_plp_1:
+          Value: true
+        pinky_tip_1:
+          Value: true
+        ring_bulk_1:
+          Value: true
+        ring_knuckle_1:
+          Value: true
+        ring_mlp_1:
+          Value: true
+        ring_plp_1:
+          Value: true
+        ring_tip_1:
+          Value: true
+        thumb_cmc_a_1:
+          Value: true
+        thumb_cmc_b_1:
+          Value: true
+        thumb_mlp_1:
+          Value: true
+        thumb_plp_1:
+          Value: true
+        thumb_tip_1:
+          Value: true
+        wrist_lower_1:
+          Value: true
+        wrist_upper_1:
+          Value: true
+      Marker Scale: 0.15000000596046448
       Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        base_link:
+          forearm_1:
+            wrist_lower_1:
+              wrist_upper_1:
+                index_bulk_1:
+                  index_knuckle_1:
+                    index_plp_1:
+                      index_mlp_1:
+                        index_tip_1:
+                          {}
+                  middle_bulk_1:
+                    hand-cover_1:
+                      {}
+                    middle_knuckle_1:
+                      middle_plp_1:
+                        middle_mlp_1:
+                          middle_tip_1:
+                            {}
+                    ring_bulk_1:
+                      pinky_bulk_1:
+                        pinky_knuckle_1:
+                          pinky_plp_1:
+                            pinky_mlp_1:
+                              pinky_tip_1:
+                                {}
+                      ring_knuckle_1:
+                        ring_plp_1:
+                          ring_mlp_1:
+                            ring_tip_1:
+                              {}
+                    thumb_cmc_b_1:
+                      thumb_cmc_a_1:
+                        thumb_plp_1:
+                          thumb_mlp_1:
+                            thumb_tip_1:
+                              {}
+      Update Interval: 0
       Value: true
-      Marker Scale: 0.15
+  Enabled: true
   Global Options:
+    Background Color: 48; 48; 48
     Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
     - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
   Value: true
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: .875
+      Distance: 0.875
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -0.057349853217601776
+        Y: -0.025578174740076065
+        Z: 0.18332234025001526
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
       Name: Current View
-      Pitch: 0.33
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.33000001311302185
+      Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.41
+      Yaw: 0.4099999964237213
+    Saved: ~
 Window Geometry:
-  Height: 800
-  Width: 1200
+  Displays:
+    collapsed: false
+  Height: 1404
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000316000004e0fc0200000002fb000000100044006900730070006c006100790073010000006e000002b10000018200fffffffb0000000a00560069006500770073010000032b000002230000013200ffffff000004b4000004e000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 2006
+  X: 1729
+  Y: 385

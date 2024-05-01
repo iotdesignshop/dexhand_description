@@ -10,7 +10,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     descr_path = get_package_share_path('dexhand_description')
-    default_model_path = descr_path / 'urdf/dexhand.xacro'
+    default_model_path = descr_path / 'urdf/dexhand-right.xacro'
     default_rviz_config_path = descr_path / 'rviz/urdf.rviz'
 
     gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
